@@ -1,0 +1,11 @@
+/* tin-ds breakpoints. Mobile first: each breakpoint applies from its width upwards.
+   CSS variables can't be used inside @media or @container, so grid.css repeats
+   these widths. Change both files together. */
+:root {
+  --breakpoint-xs: 0rem;   /* 0px     phones */
+  --breakpoint-sm: 40rem;  /* 640px   large phones */
+  --breakpoint-md: 48rem;  /* 768px   tablets */
+  --breakpoint-lg: 64rem;  /* 1024px  laptops */
+  --breakpoint-xl: 80rem;  /* 1280px  desktops */
+  --breakpoint-2xl: 96rem; /* 1536px  wide screens */
+}
