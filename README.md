@@ -1,6 +1,6 @@
 # tin-ds
 
-A text-only design system for e-commerce sites like argos.co.uk and ao.com. Every component and pattern is a Markdown file with a description, a prop table and its HTML structure in Emmet. The only code is three CSS files: [tokens.css](tokens.css) for design tokens, [breakpoints.css](breakpoints.css) for screen sizes and [grid.css](grid.css) for layout.
+A text-only design system for e-commerce sites like argos.co.uk and ao.com, and news sites like bbc.co.uk/news and theguardian.com. Every component and pattern is a Markdown file with a description, a prop table and its HTML structure in Emmet. The only code is three CSS files: [tokens.css](tokens.css) for design tokens, [breakpoints.css](breakpoints.css) for screen sizes and [grid.css](grid.css) for layout.
 
 Start with [conventions.md](conventions.md).
 
@@ -53,6 +53,17 @@ Atoms and molecules: single elements, and small groups of them that work as one 
 - [review.md](components/review.md): single review
 - [option-card.md](components/option-card.md): delivery, protection and add-on choices
 - [progress-steps.md](components/progress-steps.md): checkout progress
+- [avatar.md](components/avatar.md): a person's picture or initials
+- [timestamp.md](components/timestamp.md): when something was published or updated
+- [byline.md](components/byline.md): who wrote a story
+- [figure.md](components/figure.md): picture or video with a caption and credit
+- [quote.md](components/quote.md): pull quote and block quote
+- [callout.md](components/callout.md): key points, analysis or background box
+- [media-player.md](components/media-player.md): video and audio
+- [table.md](components/table.md): rows and columns of data
+- [comment.md](components/comment.md): one reader comment
+- [share-bar.md](components/share-bar.md): share and copy link
+- [ad-slot.md](components/ad-slot.md): labelled advertising space
 
 ## Patterns
 
@@ -82,3 +93,18 @@ Organisms and above: components put together into an experience, from a product 
 - [product-detail.md](patterns/product-detail.md): product page
 - [basket.md](patterns/basket.md): trolley page
 - [checkout.md](patterns/checkout.md): checkout and confirmation pages
+- [story-card.md](patterns/story-card.md): a story in a list or grid
+- [story-list.md](patterns/story-list.md): a titled block of stories
+- [most-read.md](patterns/most-read.md): numbered list of popular stories
+- [article-header.md](patterns/article-header.md): headline, standfirst, byline and share
+- [article-body.md](patterns/article-body.md): the story itself
+- [related-stories.md](patterns/related-stories.md): more on this story and related topics
+- [live-blog.md](patterns/live-blog.md): running updates on a live story
+- [comment-thread.md](patterns/comment-thread.md): reader comments and the comment box
+- [newsletter-signup.md](patterns/newsletter-signup.md): email newsletter block
+- [topic-header.md](patterns/topic-header.md): section or topic page header
+- [masthead.md](patterns/masthead.md): news site header
+- [news-front.md](patterns/news-front.md): news front page
+- [article.md](patterns/article.md): news story page
+- [news-section.md](patterns/news-section.md): section or topic page
+- [live-story.md](patterns/live-story.md): live coverage page

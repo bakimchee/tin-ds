@@ -36,5 +36,6 @@ section.page__section[aria-labelledby=section-title]>Heading#section-title[level
 - Parts: `.page__intro` (heading and intro text), `.page__section` (a titled block), `.page__list` (a plain stacked list). Columns always use `Grid`.
 - `.page` is centred at `--layout-max-width` with `--layout-gutter` on each side. Sections are spaced by `--layout-section-gap`.
 - `id=main` is the target of the header's skip link.
+- The header is [site-header.md](site-header.md) on shop pages and [masthead.md](masthead.md) on news pages. Both sit above `main` and both carry the skip link.
 - [cookie-banner.md](cookie-banner.md) comes first in `body` until the visitor makes a choice.
 - Stylesheets load in order: tokens, breakpoints, grid.

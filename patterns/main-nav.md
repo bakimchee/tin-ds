@@ -27,6 +27,7 @@ Dialog#menu[variant=drawer side=start title=Menu]>nav.main-nav[aria-label="All d
 ## Examples
 
 - **Argos style departments**: Technology, Home & Garden, Toys, Sports & Leisure, Health & Beauty, Clothing, Baby, Gifts, Offers.
+- **News sections**: News, Sport, Business, Culture, Travel, each opening a panel of subsections, passed in by [masthead.md](masthead.md).
 - **AO style departments**: Laundry, Dishwashers, Fridges & Freezers, Cooking, TV & Audio, Computing, Small Appliances, Deals.
 
 ## Notes
