@@ -7,6 +7,7 @@ import { Pagination } from './components.mjs';
 import { Masthead, StoryList, StoryCard, MostRead, AdSlot, ArticleHeader, ArticleBody, Figure, Quote, Callout, MediaPlayer, Table, RelatedStories, CommentThread, NewsletterSignup, TopicHeader, LiveBlog, ShareBar, Timestamp, Byline } from './news.mjs';
 import * as d from './data.mjs';
 import * as n from './news-data.mjs';
+import { buildFormsGallery } from './gallery.mjs';
 
 // Output: sites/<name>-site for pages, with site.css, img/ and video/ shared beside them.
 const sites = new URL('..', import.meta.url).pathname;
@@ -240,6 +241,9 @@ newsPage('live.html', 'MPs debate emergency flood funding', 'live-story', [
   ]),
 ], { masthead: { variant: 'minimal' } });
 
+// forms-gallery
+buildFormsGallery(sites);
+
 // Placeholder artwork so pages don't show broken images.
 const wordmark = fill => `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 40"><text x="0" y="32" font-family="system-ui, sans-serif" font-size="36" font-weight="800" letter-spacing="-1" fill="${fill}">tin</text></svg>\n`;
 const svg = label => `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300"><rect width="400" height="300" fill="#eeeeee"/><text x="200" y="155" font-family="sans-serif" font-size="22" text-anchor="middle" fill="#4d4d4d">${label}</text></svg>\n`;
@@ -253,4 +257,4 @@ for (const f of fs.readdirSync(out).filter(f => f.endsWith('.html'))) for (const
 if (vtts.size) fs.mkdirSync(`${sites}video`, { recursive: true });
 for (const name of vtts) fs.writeFileSync(`${sites}video/${name}.vtt`, 'WEBVTT\n\n00:00:00.000 --> 00:00:05.000\nPlaceholder captions for the tin news demo.\n');
 
-console.log(`shop-site: ${fs.readdirSync(out).filter(f => f.endsWith('.html')).length} pages, news-site: ${fs.readdirSync(newsOut).filter(f => f.endsWith('.html')).length} pages, ${used.size} images`);
+console.log(`shop-site: ${fs.readdirSync(out).filter(f => f.endsWith('.html')).length} pages, news-site: ${fs.readdirSync(newsOut).filter(f => f.endsWith('.html')).length} pages, forms-gallery: 1 page, ${used.size} images`);

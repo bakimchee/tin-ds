@@ -5,7 +5,7 @@
   "description": "Checks the tin-ds docs and the built example sites.",
   "scripts": {
     "check": "node check.mjs",
-    "check:html": "html-validate --config .htmlvalidate.json ../sites/shop-site/*.html ../sites/news-site/*.html",
+    "check:html": "html-validate --config .htmlvalidate.json ../sites/*-site/*.html ../sites/forms-gallery/*.html",
     "check:all": "npm run check && npm run check:html && echo '✓ html: the example sites are valid HTML'"
   },
   "dependencies": {

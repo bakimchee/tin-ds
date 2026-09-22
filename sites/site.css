@@ -3364,6 +3364,52 @@ div.option-card:not(:has(> .option-card__choice > input:checked)) > .option-card
   padding-block: var(--space-3);
 }
 
+/* ---------- forms-gallery ----------
+   Scaffolding for the gallery page in sites/forms-gallery. Not a design system component. */
+
+.page[data-page="forms-gallery"] { max-inline-size: 60rem; }
+
+.gallery__jump {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  padding: var(--space-4);
+  border-radius: var(--card-radius);
+  background: var(--color-surface-subtle);
+}
+
+.gallery__jump-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2) var(--space-4);
+  font-size: var(--font-size-200);
+}
+
+.gallery__jump-list .link { text-decoration: underline; }
+
+.gallery__examples {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+.gallery__example {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-3);
+  padding-block-start: var(--space-4);
+  border-block-start: 1px solid var(--color-border-default);
+}
+
+.gallery__example > .text:first-child {
+  font-family: monospace;
+  text-transform: none;
+}
+
+.gallery__example > :not(.text:first-child) { inline-size: min(100%, 32rem); }
+.gallery__example > :is(.option-card, .fieldset, .form, .address-lookup, .character-count) { inline-size: min(100%, 36rem); }
+
 /* ---------- news-front.md, article.md, news-section.md, live-story.md ---------- */
 
 .page[data-page="news-front"] > .ad-slot { margin-block: var(--space-2); }
