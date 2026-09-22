@@ -15,19 +15,19 @@ Space for an advert, labelled so readers can tell it apart from the news. The sp
 ### Default
 
 ```emmet
-aside.ad-slot[aria-label=Advertisement]>span.ad-slot__label[aria-hidden=true]{Advertisement}+div.ad-slot__frame
+div.ad-slot>span.ad-slot__label{Advertisement}+div.ad-slot__frame
 ```
 
 ### Leaderboard
 
 ```emmet
-aside.ad-slot[data-size=leaderboard aria-label=Advertisement]>span.ad-slot__label[aria-hidden=true]{Advertisement}+div.ad-slot__frame
+div.ad-slot[data-size=leaderboard]>span.ad-slot__label{Advertisement}+div.ad-slot__frame
 ```
 
 ### Sticky sidebar
 
 ```emmet
-aside.ad-slot[data-sticky aria-label=Advertisement]>span.ad-slot__label[aria-hidden=true]{Advertisement}+div.ad-slot__frame
+div.ad-slot[data-sticky]>span.ad-slot__label{Advertisement}+div.ad-slot__frame
 ```
 
 ## Examples
@@ -38,7 +38,8 @@ aside.ad-slot[data-sticky aria-label=Advertisement]>span.ad-slot__label[aria-hid
 
 ## Notes
 
-- The label must be visible. "Advertisement" in full, not "Ad" or "Sponsored", which means something else.
+- The label must be visible, and it is real text, so screen reader users hear it too. "Advertisement" in full, not "Ad" or "Sponsored", which means something else.
+- It is a `div`, not an `aside`: an advert is not a landmark, and a page full of them would fill the landmarks list.
 - Reserve the space with the slot's ratio, so the story doesn't move when the advert arrives.
 - Keep adverts out of the article body flow on a live story, where content updates.
 - Tokens: `--color-surface-subtle`, `--color-text-muted`, `--font-size-100`.

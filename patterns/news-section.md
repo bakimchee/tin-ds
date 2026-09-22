@@ -19,13 +19,13 @@ A section or topic page: what the subject is, then its stories, newest first, wi
 ### Default
 
 ```emmet
-Masthead+main#main.page[data-page=news-section]>Breadcrumb+TopicHeader+nav[aria-label=Subsections]>ul.page__list>(li>Link[href=/news/politics variant=subtle]{Politics})+(li>Link[href=/news/england variant=subtle]{England})^^Grid>(GridItem[spanLg=8]>StoryList[layout=lead isTitleHidden]+StoryList[layout=list]+Pagination)+(GridItem[as=aside spanLg=4]>MostRead+AdSlot)^^SiteFooter
+Masthead+main#main.page[data-page=news-section]>Breadcrumb+TopicHeader+nav[aria-label=Subsections]>ul.page__list>(li>Link[href=/news/politics variant=subtle]{Politics})+(li>Link[href=/news/england variant=subtle]{England})^^Grid>(GridItem[spanLg=8]>StoryList[layout=lead isTitleHidden]+StoryList[layout=list]+Pagination)+(GridItem[spanLg=4]>MostRead+AdSlot)^^SiteFooter
 ```
 
 ### Topic page
 
 ```emmet
-Masthead+main#main.page[data-page=news-section]>TopicHeader+Grid>(GridItem[spanLg=8]>StoryList[layout=list]+Pagination)+(GridItem[as=aside spanLg=4]>MostRead)^^SiteFooter
+Masthead+main#main.page[data-page=news-section]>TopicHeader+Grid>(GridItem[spanLg=8]>StoryList[layout=list]+Pagination)+(GridItem[spanLg=4]>MostRead)^^SiteFooter
 ```
 
 ## Examples

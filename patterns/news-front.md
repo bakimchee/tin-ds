@@ -18,7 +18,7 @@ The news front page: the lead story, top stories, then a block per section, with
 ### Default
 
 ```emmet
-Masthead+main#main.page[data-page=news-front]>Heading[level=1 isVisuallyHidden]{tin news}+AdSlot[size=leaderboard]+Grid>(GridItem[spanLg=8]>StoryList[layout=lead isTitleHidden])+(GridItem[as=aside spanLg=4]>MostRead+AdSlot)^StoryList[layout=grid]+AdSlot+StoryList[layout=grid]+NewsletterSignup+StoryList[layout=grid]^SiteFooter
+Masthead+main#main.page[data-page=news-front]>Heading[level=1 isVisuallyHidden]{tin news}+AdSlot[size=leaderboard]+Grid>(GridItem[spanLg=8]>StoryList[layout=lead isTitleHidden])+(GridItem[spanLg=4]>MostRead+AdSlot)^StoryList[layout=grid]+AdSlot+StoryList[layout=grid]+NewsletterSignup+StoryList[layout=grid]^SiteFooter
 ```
 
 ### Without a sidebar

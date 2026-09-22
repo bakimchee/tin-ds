@@ -18,19 +18,19 @@ A story that is still happening: the live feed of updates, with the background a
 ### Default
 
 ```emmet
-Masthead[variant=minimal]+main#main.page[data-page=live-story]>ArticleHeader[isLive]+Grid>(GridItem[spanLg=8]>LiveBlog)+(GridItem[as=aside spanLg=4]>Callout[variant=summary]+RelatedStories+MostRead)^^SiteFooter
+Masthead[variant=minimal]+main#main.page[data-page=live-story]>ArticleHeader[isLive]+Grid>(GridItem[spanLg=8]>LiveBlog)+(GridItem[spanLg=4]>Callout[variant=summary]+RelatedStories+MostRead)^^SiteFooter
 ```
 
 ### With a live stream
 
 ```emmet
-Masthead[variant=minimal]+main#main.page[data-page=live-story]>ArticleHeader[isLive]+Figure[width=wide]>MediaPlayer[isLive]^^Grid>(GridItem[spanLg=8]>LiveBlog)+(GridItem[as=aside spanLg=4]>RelatedStories+MostRead)^^SiteFooter
+Masthead[variant=minimal]+main#main.page[data-page=live-story]>ArticleHeader[isLive]+Figure[width=wide]>MediaPlayer[isLive]^^Grid>(GridItem[spanLg=8]>LiveBlog)+(GridItem[spanLg=4]>RelatedStories+MostRead)^^SiteFooter
 ```
 
 ### Coverage ended
 
 ```emmet
-Masthead+main#main.page[data-page=live-story]>ArticleHeader+Alert[status=info]>Text{This live coverage has ended.}+Link[href=/news/articles/c2x81ydlk4no]{Read our full report}^^Grid>(GridItem[spanLg=8]>LiveBlog[isEnded])+(GridItem[as=aside spanLg=4]>RelatedStories)^^SiteFooter
+Masthead+main#main.page[data-page=live-story]>ArticleHeader+Alert[status=info]>Text{This live coverage has ended.}+Link[href=/news/articles/c2x81ydlk4no]{Read our full report}^^Grid>(GridItem[spanLg=8]>LiveBlog[isEnded])+(GridItem[spanLg=4]>RelatedStories)^^SiteFooter
 ```
 
 ## Examples

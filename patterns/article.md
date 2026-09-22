@@ -19,19 +19,19 @@ A news story: header, the story itself, then what to read next. The reading colu
 ### Default
 
 ```emmet
-Masthead+main#main.page[data-page=article]>Breadcrumb+Grid>(GridItem[spanLg=8]>ArticleHeader+ArticleBody+RelatedStories+CommentThread)+(GridItem[as=aside spanLg=4]>AdSlot[isSticky]+MostRead)^^SiteFooter
+Masthead+main#main.page[data-page=article]>Breadcrumb+Grid>(GridItem[spanLg=8]>ArticleHeader+ArticleBody+RelatedStories+CommentThread)+(GridItem[spanLg=4]>AdSlot[isSticky]+MostRead)^^SiteFooter
 ```
 
 ### Full width lead picture
 
 ```emmet
-Masthead+main#main.page[data-page=article]>ArticleHeader+Grid>(GridItem[spanLg=8]>ArticleBody+NewsletterSignup[variant=inline]+RelatedStories)+(GridItem[as=aside spanLg=4]>MostRead)^^SiteFooter
+Masthead+main#main.page[data-page=article]>ArticleHeader+Grid>(GridItem[spanLg=8]>ArticleBody+NewsletterSignup[variant=inline]+RelatedStories)+(GridItem[spanLg=4]>MostRead)^^SiteFooter
 ```
 
 ### Video story
 
 ```emmet
-Masthead+main#main.page[data-page=article]>Breadcrumb+Grid>(GridItem[spanLg=8]>ArticleHeader+Figure[width=wide]>MediaPlayer^^ArticleBody+RelatedStories)+(GridItem[as=aside spanLg=4]>MostRead)^^SiteFooter
+Masthead+main#main.page[data-page=article]>Breadcrumb+Grid>(GridItem[spanLg=8]>ArticleHeader+Figure[width=wide]>MediaPlayer^^ArticleBody+RelatedStories)+(GridItem[spanLg=4]>MostRead)^^SiteFooter
 ```
 
 ## Examples
