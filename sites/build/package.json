@@ -1,0 +1,12 @@
+{
+  "name": "tin-ds-sites",
+  "private": true,
+  "type": "module",
+  "description": "Builds the example sites in sites/ from the components and patterns documented in tin-ds.",
+  "scripts": {
+    "build": "node build.mjs"
+  },
+  "dependencies": {
+    "emmet": "^2.4.11"
+  }
+}

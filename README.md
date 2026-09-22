@@ -4,6 +4,15 @@ A text-only design system for e-commerce sites like argos.co.uk and ao.com, and 
 
 Start with [conventions.md](conventions.md).
 
+## Example sites
+
+Demo sites in [sites/](sites/), built only from these docs. They are a bank of examples of the design system in use.
+
+- [shop-site](sites/shop-site/index.html): an Argos or AO style shop. Home, listing, product, basket, checkout and confirmation.
+- [news-site](sites/news-site/index.html): a BBC or Guardian style news site. Front page, article, section and live coverage.
+
+Both share [sites/site.css](sites/site.css), which styles every component and pattern, and the placeholder artwork in `sites/img`. To rebuild them, run `npm install` then `npm run build` in [sites/build](sites/build).
+
 ## Components
 
 Atoms and molecules: single elements, and small groups of them that work as one unit.
