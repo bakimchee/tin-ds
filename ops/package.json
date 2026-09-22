@@ -1,0 +1,15 @@
+{
+  "name": "tin-ds-ops",
+  "private": true,
+  "type": "module",
+  "description": "Checks the tin-ds docs and the built example sites.",
+  "scripts": {
+    "check": "node check.mjs",
+    "check:html": "html-validate --config .htmlvalidate.json ../sites/shop-site/*.html ../sites/news-site/*.html",
+    "check:all": "npm run check && npm run check:html && echo '✓ html: the example sites are valid HTML'"
+  },
+  "dependencies": {
+    "emmet": "^2.4.11",
+    "html-validate": "^9.7.1"
+  }
+}

@@ -13,6 +13,15 @@ Demo sites in [sites/](sites/), built only from these docs. They are a bank of e
 
 Both share [sites/site.css](sites/site.css), which styles every component and pattern, and the placeholder artwork in `sites/img`. To rebuild them, run `npm install` then `npm run build` in [sites/build](sites/build).
 
+## Checks
+
+[ops/](ops/) checks the docs and the example sites. Run `npm install` then `npm run check:all` in [ops/](ops/):
+
+- Every Emmet block expands, every component named in one exists, and every link resolves.
+- Every prop used on a component is in that component's prop table.
+- No component uses a pattern, the rule in [conventions.md](conventions.md).
+- The example sites are valid HTML.
+
 ## Components
 
 Atoms and molecules: single elements, and small groups of them that work as one unit.
