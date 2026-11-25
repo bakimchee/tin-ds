@@ -82,7 +82,7 @@ All props are camelCase and use the same words for the same things.
 
 ## Tokens
 
-All visual values live in [tokens.css](tokens.css) as CSS variables.
+All visual values live in [tokens.css](packages/css/tokens.css) as CSS variables.
 
 - Two tiers. **Primitive** tokens are raw values (`--color-red-600`). **Semantic** tokens give them a job (`--color-action-primary-background`).
 - Names go from general to specific: `--{category}-{concept}-{variant}-{property}-{state}`. Example: `--color-action-primary-background-hover`.
@@ -101,7 +101,7 @@ Mobile first: each breakpoint applies from its width up, until a larger one take
 | `xl` | 1280px (`80rem`) | Desktops |
 | `2xl` | 1536px (`96rem`) | Wide screens |
 
-- [breakpoints.css](breakpoints.css) holds the widths as variables for reference and scripts. CSS variables don't work inside `@media`, so [grid.css](grid.css) repeats the widths. Change both files together.
+- [breakpoints.css](packages/css/breakpoints.css) holds the widths as variables for reference and scripts. CSS variables don't work inside `@media`, so [grid.css](packages/css/grid.css) repeats the widths. Change both files together.
 - Widths are in `rem`, so the layout follows the browser's text size setting.
 - Write media queries as `@media (width >= 48rem)`.
 - Lay out components with [grid.md](components/grid.md) and [grid-item.md](components/grid-item.md). Components don't set their own widths.

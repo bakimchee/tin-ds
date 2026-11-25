@@ -17,7 +17,7 @@ for (const dir of [out, newsOut, `${sites}img`]) fs.mkdirSync(dir, { recursive: 
 
 // page.md: Document
 const page = (file, title, pageType, body, { header = {}, footer = {} } = {}) => {
-  const html = x(`html[lang=en-GB]>head>meta[charset=utf-8]+meta[name=viewport content="width=device-width, initial-scale=1"]+title${tx(`${title} | tin`)}+link[rel=stylesheet href=../../tokens.css]+link[rel=stylesheet href=../../breakpoints.css]+link[rel=stylesheet href=../../grid.css]+link[rel=stylesheet href=../site.css]^body>${slot(3)}+${slot(0)}+main#main.page[data-page=${pageType}]>${slot(1)}^${slot(2)}`,
+  const html = x(`html[lang=en-GB]>head>meta[charset=utf-8]+meta[name=viewport content="width=device-width, initial-scale=1"]+title${tx(`${title} | tin`)}+link[rel=stylesheet href=../../packages/css/tokens.css]+link[rel=stylesheet href=../../packages/css/breakpoints.css]+link[rel=stylesheet href=../../packages/css/grid.css]+link[rel=stylesheet href=../site.css]^body>${slot(3)}+${slot(0)}+main#main.page[data-page=${pageType}]>${slot(1)}^${slot(2)}`,
     SiteHeader({ uspItems: d.usp, departments: d.departments, basketCount: 2, ...header }), body, SiteFooter({ ...d.footer, ...footer }),
     CookieBanner({ description: 'We use cookies to make our site work, remember your trolley and show you relevant offers.' }));
   fs.writeFileSync(`${out}/${file}`, `<!DOCTYPE html>\n${html}\n`);
@@ -133,7 +133,7 @@ page('confirmation.html', 'Order confirmed', 'confirmation', [
 
 // page.md, with masthead.md as the header
 const newsPage = (file, title, pageType, body, { masthead = {} } = {}) => {
-  const html = x(`html[lang=en-GB]>head>meta[charset=utf-8]+meta[name=viewport content="width=device-width, initial-scale=1"]+title${tx(`${title} | tin news`)}+link[rel=stylesheet href=../../tokens.css]+link[rel=stylesheet href=../../breakpoints.css]+link[rel=stylesheet href=../../grid.css]+link[rel=stylesheet href=../site.css]^body>${slot(3)}+${slot(0)}+main#main.page[data-page=${pageType}]>${slot(1)}^${slot(2)}`,
+  const html = x(`html[lang=en-GB]>head>meta[charset=utf-8]+meta[name=viewport content="width=device-width, initial-scale=1"]+title${tx(`${title} | tin news`)}+link[rel=stylesheet href=../../packages/css/tokens.css]+link[rel=stylesheet href=../../packages/css/breakpoints.css]+link[rel=stylesheet href=../../packages/css/grid.css]+link[rel=stylesheet href=../site.css]^body>${slot(3)}+${slot(0)}+main#main.page[data-page=${pageType}]>${slot(1)}^${slot(2)}`,
     Masthead({ sections: n.sections, datetime: '2026-09-22', dateLabel: 'Tuesday 22 September 2026', ...masthead }),
     body,
     SiteFooter({ ...n.footer, hasNewsletter: false, appsLabel: 'Get the tin news app', logoHref: 'news.html', logoLabel: 'tin news' }),

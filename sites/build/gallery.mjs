@@ -107,7 +107,7 @@ export const buildFormsGallery = sites => {
     jump,
     ...sections.map(([id, title, examples]) => section(id, title, examples)),
   ].join('');
-  const html = x(`html[lang=en-GB]>head>meta[charset=utf-8]+meta[name=viewport content="width=device-width, initial-scale=1"]+title{Forms gallery | tin-ds}+link[rel=stylesheet href=../../tokens.css]+link[rel=stylesheet href=../../breakpoints.css]+link[rel=stylesheet href=../../grid.css]+link[rel=stylesheet href=../site.css]^body>main#main.page[data-page=forms-gallery]>${slot(0)}`, body);
+  const html = x(`html[lang=en-GB]>head>meta[charset=utf-8]+meta[name=viewport content="width=device-width, initial-scale=1"]+title{Forms gallery | tin-ds}+link[rel=stylesheet href=../../packages/css/tokens.css]+link[rel=stylesheet href=../../packages/css/breakpoints.css]+link[rel=stylesheet href=../../packages/css/grid.css]+link[rel=stylesheet href=../site.css]^body>main#main.page[data-page=forms-gallery]>${slot(0)}`, body);
   fs.writeFileSync(`${out}/index.html`, `<!DOCTYPE html>\n${html}\n`);
   return 1;
 };

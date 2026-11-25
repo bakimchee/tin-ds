@@ -8,7 +8,7 @@ tin-ds is a **text-only design system** for e-commerce sites (Argos, AO) and new
 
 - `components/*.md`: atoms and molecules (`Button`, `Price`, `FormField`).
 - `patterns/*.md`: organisms up to whole page templates (`ProductCard`, `SiteHeader`, `Home`).
-- `tokens.css`, `breakpoints.css`, `grid.css`: the only design system code.
+- `packages/css/`: the only design system code, published as `@tin-ds/css`. `tokens.css`, `breakpoints.css` and `grid.css`, plus `index.css`, which imports all three.
 - `sites/`: example sites generated from the docs. They show the system in use; they are not the source of truth.
 - `ops/`: checks that guard the docs and the example sites.
 
@@ -58,5 +58,6 @@ They check that every Emmet block expands, every referenced component exists, ev
 
 ## Don't
 
-- Add frameworks, build tools or JavaScript to the design system itself. The only code is the three CSS files, plus the tooling in `sites/build/` and `ops/`.
+- Add frameworks, build tools or JavaScript to the design system itself. The only code is the CSS in `packages/css/`, plus the tooling in `sites/build/` and `ops/`.
+- Add a file to `packages/css/` without also adding it to `files` and `exports` in its `package.json`, or it won't ship.
 - Commit `node_modules/` or `.playwright-mcp/`. Both are in `.gitignore`.
