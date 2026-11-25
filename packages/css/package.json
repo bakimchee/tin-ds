@@ -1,0 +1,29 @@
+{
+  "name": "@tin-ds/css",
+  "version": "0.1.0",
+  "description": "The tin-ds design tokens, breakpoints and grid as plain CSS.",
+  "license": "UNLICENSED",
+  "style": "index.css",
+  "exports": {
+    ".": "./index.css",
+    "./index.css": "./index.css",
+    "./tokens.css": "./tokens.css",
+    "./breakpoints.css": "./breakpoints.css",
+    "./grid.css": "./grid.css",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.css",
+    "tokens.css",
+    "breakpoints.css",
+    "grid.css"
+  ],
+  "sideEffects": [
+    "*.css"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bakimchee/tin-ds.git",
+    "directory": "packages/css"
+  }
+}

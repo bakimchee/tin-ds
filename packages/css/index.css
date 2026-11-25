@@ -1,0 +1,6 @@
+/* tin-ds: every foundation in one file. Order matters: grid.css needs tokens.css.
+   Bundlers inline these imports. Without a bundler, link the three files
+   directly instead, so the browser loads them in parallel. */
+@import "./tokens.css";
+@import "./breakpoints.css";
+@import "./grid.css";
