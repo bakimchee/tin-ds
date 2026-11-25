@@ -1,0 +1,49 @@
+# Runs the tin-ds checks on every pull request and on main.
+# See ops/ for what each check does.
+name: Checks
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: checks-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  checks:
+    name: checks
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: |
+            ops/package-lock.json
+            sites/build/package-lock.json
+
+      # The example sites are generated, so a rebuild must change nothing.
+      - name: Example sites match the generator
+        working-directory: sites/build
+        run: |
+          npm ci
+          npm run build
+          if [ -n "$(git status --porcelain -- ..)" ]; then
+            git status --short -- ..
+            echo "::error::The example sites are out of date. Run 'npm run build' in sites/build and commit the result."
+            exit 1
+          fi
+
+      - name: Docs and example sites pass the checks
+        working-directory: ops
+        run: |
+          npm ci
+          npm run check:all

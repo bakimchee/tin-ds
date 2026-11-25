@@ -84,6 +84,8 @@ cd ops && npm install && npm run check:all
 
 They check that every Emmet block expands, every referenced component exists, every link resolves, every prop is documented, no component uses a pattern, and the example sites are valid HTML. `npm run check` runs only the docs checks. Fix what fails rather than weakening a check.
 
+[.github/workflows/checks.yml](.github/workflows/checks.yml) runs the same checks on every pull request. It also rebuilds the example sites and fails if that changes anything, so commit the rebuilt sites along with any change to the docs or the generator.
+
 ## Don't
 
 - Add frameworks, build tools or JavaScript to the design system itself. The only code is the CSS in `packages/css/`, plus the tooling in `sites/build/` and `ops/`.
