@@ -1,8 +1,17 @@
 {
-  "name": "@tin-ds/css",
+  "name": "@tinds/css",
   "version": "0.1.0",
   "description": "The tin-ds design tokens, breakpoints and grid as plain CSS.",
-  "license": "UNLICENSED",
+  "license": "MIT",
+  "keywords": [
+    "design-system",
+    "design-tokens",
+    "css",
+    "css-variables",
+    "grid"
+  ],
+  "homepage": "https://github.com/bakimchee/tin-ds/tree/main/packages/css#readme",
+  "bugs": "https://github.com/bakimchee/tin-ds/issues",
   "style": "index.css",
   "exports": {
     ".": "./index.css",
@@ -21,6 +30,9 @@
   "sideEffects": [
     "*.css"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/bakimchee/tin-ds.git",

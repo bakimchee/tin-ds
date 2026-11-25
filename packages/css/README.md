@@ -1,6 +1,6 @@
-# @tin-ds/css
+# @tinds/css
 
-The code half of [tin-ds](../../README.md): design tokens, breakpoints and the grid as plain CSS. Components and patterns are documented in Markdown in the repo root. This package gives them their visual values and layout.
+The code half of [tin-ds](https://github.com/bakimchee/tin-ds): design tokens, breakpoints and the grid as plain CSS. Components and patterns are documented in Markdown in the repo root. This package gives them their visual values and layout.
 
 | File | What it holds |
 | --- | --- |
@@ -9,19 +9,25 @@ The code half of [tin-ds](../../README.md): design tokens, breakpoints and the g
 | [grid.css](grid.css) | The 12-column, mobile-first grid. Needs `tokens.css`. |
 | [index.css](index.css) | Imports all three, in order. |
 
+## Install
+
+```sh
+npm install @tinds/css
+```
+
 ## Use
 
 With a bundler (Vite, webpack, Parcel, Next.js), import the whole package:
 
 ```css
-@import "@tin-ds/css";
+@import "@tinds/css";
 ```
 
 or only the parts you need:
 
 ```css
-@import "@tin-ds/css/tokens.css";
-@import "@tin-ds/css/grid.css";
+@import "@tinds/css/tokens.css";
+@import "@tinds/css/grid.css";
 ```
 
 Without a bundler, copy or serve the files and link them in this order:
@@ -37,4 +43,8 @@ Without a bundler, copy or serve the files and link them in this order:
 - Components and patterns use semantic tokens only. To re-theme, change the primitives or the brand aliases in `tokens.css`.
 - CSS variables don't work inside `@media`, so `grid.css` repeats the widths in `breakpoints.css`. Change both files together.
 
-The full rules are in [conventions.md](../../conventions.md).
+The full rules are in [conventions.md](https://github.com/bakimchee/tin-ds/blob/main/conventions.md).
+
+## Licence
+
+[MIT](LICENSE)
