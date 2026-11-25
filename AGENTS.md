@@ -8,7 +8,7 @@ tin-ds is a **text-only design system** for e-commerce sites (Argos, AO) and new
 
 - `components/*.md`: atoms and molecules (`Button`, `Price`, `FormField`).
 - `patterns/*.md`: organisms up to whole page templates (`ProductCard`, `SiteHeader`, `Home`).
-- `packages/css/`: the only design system code, published as `@tin-ds/css`. `tokens.css`, `breakpoints.css` and `grid.css`, plus `index.css`, which imports all three.
+- `packages/css/`: the only design system code, published as `@tinds/css`. `tokens.css`, `breakpoints.css` and `grid.css`, plus `index.css`, which imports all three.
 - `sites/`: example sites generated from the docs. They show the system in use; they are not the source of truth.
 - `ops/`: checks that guard the docs and the example sites.
 

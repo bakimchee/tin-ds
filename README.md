@@ -1,6 +1,6 @@
 # tin-ds
 
-A text-only design system for e-commerce sites like argos.co.uk and ao.com, and news sites like bbc.co.uk/news and theguardian.com. Every component and pattern is a Markdown file with a description, a prop table and its HTML structure in Emmet. The only code is three CSS files in the [@tin-ds/css](packages/css/README.md) package: [tokens.css](packages/css/tokens.css) for design tokens, [breakpoints.css](packages/css/breakpoints.css) for screen sizes and [grid.css](packages/css/grid.css) for layout.
+A text-only design system for e-commerce sites like argos.co.uk and ao.com, and news sites like bbc.co.uk/news and theguardian.com. Every component and pattern is a Markdown file with a description, a prop table and its HTML structure in Emmet. The only code is three CSS files in the [@tinds/css](packages/css/README.md) package: [tokens.css](packages/css/tokens.css) for design tokens, [breakpoints.css](packages/css/breakpoints.css) for screen sizes and [grid.css](packages/css/grid.css) for layout.
 
 Start with [conventions.md](conventions.md).
 

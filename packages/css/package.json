@@ -1,5 +1,5 @@
 {
-  "name": "@tin-ds/css",
+  "name": "@tinds/css",
   "version": "0.1.0",
   "description": "The tin-ds design tokens, breakpoints and grid as plain CSS.",
   "license": "MIT",
