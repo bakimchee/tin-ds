@@ -27,6 +27,34 @@ tin-ds is a **text-only design system** for e-commerce sites (Argos, AO) and new
 - Components don't set their own widths. Layout goes through `Grid` / `GridItem`.
 - Use British English and UK retail words: "trolley", "postcode", "colour" in copy. Keep prose short and plain, like the existing docs.
 
+## Git workflow
+
+**Never push to `main`.** Every change goes on a branch and through a pull request.
+
+1. Branch from an up-to-date `main`. Name it `<type>/<short-description>`, such as `feat/energy-rating` or `fix/grid-offsets`.
+2. Write each commit as a [Conventional Commit](https://www.conventionalcommits.org/en/v1.0.0/): `<type>(<scope>): <description>`.
+3. Run the checks (below) and make sure they pass.
+4. Push the branch and open a pull request. Its title uses the same format as a commit, and its description says what changed and why.
+5. Agents don't merge their own pull requests unless they're asked to.
+
+Types, as they apply here:
+
+| Type | Use for |
+| --- | --- |
+| `feat` | A new component, pattern, prop, variation or token. |
+| `fix` | A wrong doc, broken CSS or a failing check put right. |
+| `docs` | README, conventions, AGENTS and other prose that doesn't change the system. |
+| `refactor` | Moving or restructuring files without changing what they describe. |
+| `style` | Formatting only. |
+| `build` | `packages/css/package.json`, the site generator in `sites/build/` and dependencies. |
+| `ci` | Workflows and the checks in `ops/`. |
+| `chore` | Anything else, such as `.gitignore`. |
+| `revert` | Undoing an earlier commit. |
+
+- The scope is optional. Use the component or pattern file name (`feat(product-card): add hasCompare`), or `css`, `sites`, `ops`.
+- Write the description in the imperative and lower case, with no full stop: `fix(button): keep the label on one line`.
+- Mark a breaking change with `!` after the type or scope, plus a `BREAKING CHANGE:` footer. Removing or renaming a prop, token, class or exported file counts as breaking: `feat(tokens)!: rename the action colour tokens`.
+
 ## Common tasks
 
 ### Add or change a component or pattern
